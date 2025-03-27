@@ -42,8 +42,10 @@ public class ListArray {
      * @return true se a lista nao contem elementos
      */
     public boolean isEmpty() {
+        //if(count == 0) return true;
+
         // Implemente
-        return false;
+        return (count == 0);
     }
 
     /**
@@ -82,7 +84,12 @@ public class ListArray {
 
     @Override
     public String toString() {
-        return "";
+        String aux = "[ ";
+        for (int i = 0; i < count; i++) {
+         aux = aux + data[i] + " ";   
+        }
+        aux = aux + " ]";
+        return aux;
     }
 
     private void setCapacity(int newCapacity) {
