@@ -3,7 +3,7 @@
  * @author Isabel H. Manssour
  */
 
-public class ListArray {
+public class ListArray implements ListTAD{
 
     // Atributos
     private static final int TAM_DEFAULT = 10;
@@ -41,10 +41,10 @@ public class ListArray {
      * Retorna true se a lista nao contem elementos.
      * @return true se a lista nao contem elementos
      */
+
+    // *** IMPLEMENTADO
     public boolean isEmpty() {
         //if(count == 0) return true;
-
-        // Implemente
         return (count == 0);
     }
 
@@ -74,7 +74,7 @@ public class ListArray {
      * @return o elemento da posicao especificada
      * @throws IndexOutOfBoundsException se (index < 0 || index >= size())
      */
-    public int get(int index) {
+    public Integer get(int index) {
         if ((index < 0) || (index >= count)) {
             throw new IndexOutOfBoundsException("Index = " + index);
         }
@@ -118,9 +118,15 @@ public class ListArray {
      * @return o elemento armazenado anteriormente na posicao da lista
      * @throws IndexOutOfBoundsException se (index < 0 || index >= size())
      */
-    public int set(int index, Integer element) {
-       // Implemente este metodo
-        return -1;
+
+    // *** IMPLEMENTADO
+    public Integer set(int index, Integer element) {
+        if (index < 0 || index >= size()){
+            throw new IndexOutOfBoundsException("Index = " + index);
+        }
+        Integer anterior =  data[index];
+        data[index] = element;
+        return anterior;
     }
 
     /**
@@ -132,6 +138,26 @@ public class ListArray {
     public boolean contains(Integer element) {
        // Implemente este metodo
         return false;
+    }
+
+    @Override
+    public void add(int index, Integer element) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public boolean remove(Integer e) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int capacity() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int indexOf(Integer e) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 }
