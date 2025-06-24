@@ -1,0 +1,12 @@
+Filipe Rodrigues de Freitas (24102243) & Gustavo Fagundes Flores (24106519)
+
+*** RELATÓRIO ***
+Exercícios escolhidos:
+
+> Lista de exercícios (árvores) para a prova P2 (Questões de 1 à 6)
+-> Solução: Tree.java
+-> Caso de teste: app_1-6.java
+
+> Lista de árvores
+-> Solução: BinarySearchTree.java
+-> Caso de teste: app_7-10.java
